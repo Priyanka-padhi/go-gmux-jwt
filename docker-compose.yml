@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  postgres:
+    container_name: postgres_container_jwt
+    image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: app_db
+      POSTGRES_HOST: localhost
+    ports:
+      - "5432:5432"
+#    volumes:
+#      - pg_data:/var/lib/postgres/data
+    restart: always
+
